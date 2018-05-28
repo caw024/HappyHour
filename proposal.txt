@@ -5,7 +5,7 @@ Given a 9 by 9 sudoku puzzle that is solvable
 
 Plan:
 Recursively go through the puzzle and find the unique solution (We will be borrowing puzzles from online sources)
-We will be following the rules of the traditional sudoku puzzle (row, column, 3 x 3)
+We will be following the rules of the traditional sudoku puzzle (checking rows, columns, 3 x 3)
 
 How it connects to what we learned:
 A great chunk of the class was devoted to thinking recursively. This project would enable us to take this learning and apply it to a more complicated task.
