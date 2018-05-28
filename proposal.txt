@@ -1,2 +1,12 @@
-We propose that our final project be on ___.
+We propose that our final project be on making a sudoku solver algorithm.
+
+Precondition:
+Given a 9 by 9 sudoku puzzle that is solvable
+
+Plan:
+Recursively go through the puzzle and find the solution
+
+How it connects to what we learned:
+A great chunk of the class was devoted to thinking recursively. This project would enable us to take this learning and apply it to a more complicated task.
+
 
