@@ -1,4 +1,4 @@
-# Proposal
+# Proposal #
 
 We propose that our final project be on making a sudoku solver algorithm.
 
