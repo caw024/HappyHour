@@ -1,0 +1,14 @@
+PLANS!
+
+- Finish a simple version of cell.
+- Finish a simple version of square.
+- Finish a simple version of board.
+- Upgrede cell to account for all cases.
+- Upgrade square for incorrect inputs, etc.
+- Code solution solver.
+- Record time for cpu to solve.
+- Give user a board to solve.
+- Record time for user to solve.
+- Winner Winner Chicken Dinner method return statement.
+- Difficulties of Board adjustable.
+
