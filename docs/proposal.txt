@@ -44,7 +44,9 @@ Square has-a cell
 --------------------------------------------------------------------------------------------------------------------------------------
 
 How it connects to what we learned:
-  A great chunk of the class was devoted to thinking recursively. This project would enable us to take this learning and apply it to a  more complicated and thought-provoking task. The classes of Sudoku also have a has-a relationship, which is a component of object oriented programming.
+  A great chunk of the class was devoted to thinking recursively. 
+  This project would enable us to take this learning and apply it to a more complicated and thought-provoking task. 
+  The classes of Sudoku also have a has-a relationship, which is a component of object oriented programming.
   
 --------------------------------------------------------------------------------------------------------------------------------------
 
