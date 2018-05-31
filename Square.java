@@ -20,4 +20,18 @@ public class Square{
 	}
 	return true;
     }
+    public int[] getRow(int r){
+	int[] row = new int[3];
+	for (int c = 0; c < 3; c++){
+	    row[c] = s[r][c];
+	}
+	return row;
+    }
+    public int[] getCol(int c){
+	int[] col = new int[3];
+	for (int r = 0; r < 3; r++){
+	    col[r] = s[r][c];
+	}
+	return col;
+    }
 }
