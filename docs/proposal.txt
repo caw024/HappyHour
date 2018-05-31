@@ -54,3 +54,4 @@ Additional Functionality (If time permits):
   Report time it took to solve sudoku puzzle and data.
   Have a human person vs AI compete to solve it.
   Talk more about sudoku time complexity and Latin Squares 
+
