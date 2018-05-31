@@ -12,7 +12,7 @@ You are given a 9 x 9 square along with some fixed numbers. You are to fill the 
 (ii) Each column contains every single number exactly once
 (iii) Each 3x3 square whose row and column has indicies congruent to 0,1,2 mod 3 contains every single number exactly once
 
-This is very similar to latin squares, with thet exception of the 3x3 square condition. 
+This is very similar to latin squares, with the exception of the 3x3 square condition. 
 These puzzles all have a unique solution. Cells provided upon the start of game cannot be changed/ edited. 
 The game is done when all squares are filled and conditions (i), (ii), and (iii) are satisfied.
 
