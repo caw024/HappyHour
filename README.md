@@ -1,6 +1,6 @@
 # HappyHour
 
-### Our FINAL PROJECT is a sudoku.
+### Our FINAL PROJECT is a sudoku solver.
 
 Plan:
 We intend to use a sudoku puzzle from online, and use an algorithm to try to 
