@@ -1,0 +1,16 @@
+Team HappyHour- Calvin Aw, Kendrick Liang, Zane Wang
+APCS2 pd1
+HW57 -- Changes in Latitude, Changes in Attitude
+2018-06-04 M
+
+PLAN:
+
+CORE:
+- Make a sudoku solver class or method in existing sudoku class
+|
+-> Improve robustness and functionality of our classes.
+
+NON-ESSENTIAL:
+- Make an empty sudoku puzzle for user to solve.
+- Records times of computer vs the user. 
+- Whenever one wins, displays a win/lose message and the time elapsed.
