@@ -8,7 +8,7 @@ public class Square{
 	int i = 0;
 	for (int r = 0; r < 3; r++){
 	    for (int c = 0; c < 3; c++){
-		a[i] = s[r][c];
+		a[i] = s[r][c].getValue();
 		i++;
 	    }
 	}
@@ -23,14 +23,14 @@ public class Square{
     public int[] getRow(int r){
 	int[] row = new int[3];
 	for (int c = 0; c < 3; c++){
-	    row[c] = s[r][c];
+	    row[c] = s[r][c].getValue();
 	}
 	return row;
     }
     public int[] getCol(int c){
 	int[] col = new int[3];
 	for (int r = 0; r < 3; r++){
-	    col[r] = s[r][c];
+	    col[r] = s[r][c].getValue();
 	}
 	return col;
     }
