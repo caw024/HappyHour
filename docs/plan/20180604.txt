@@ -12,5 +12,7 @@ CORE:
 
 NON-ESSENTIAL:
 - Make an empty sudoku puzzle for user to solve.
+|
+-> Maybe use processing after getting it to work in terminal.
 - Records times of computer vs the user. 
 - Whenever one wins, displays a win/lose message and the time elapsed.
