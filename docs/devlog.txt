@@ -1,4 +1,4 @@
-Happyhour
+HappyHour
 Calvin Aw
 Kendrick Liang
 Zane Wang
@@ -85,7 +85,7 @@ Updated our README.md to reflect proposal.txt.
 
 ==============================================================
 2018-05-30
-Kendrick
+Kendrick Liang
 Typed up the Cell.java and Square.java
 --------------------------------------------------------------
 
