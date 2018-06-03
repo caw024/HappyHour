@@ -19,5 +19,3 @@ NON-ESSENTIAL:
 |
 -> Maybe use processing after getting it to work in terminal.
 - Whenever one wins, displays a win/lose message and the time elapsed.
-
-- 
