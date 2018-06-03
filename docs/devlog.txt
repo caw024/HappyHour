@@ -86,7 +86,8 @@ Updated our README.md to reflect proposal.txt.
 ==============================================================
 2018-05-30
 Kendrick Liang
-Typed up the Cell.java and Square.java
+Typed up the Cell.java and Square.java, made Sudoku.java file
+- Includes constructors and methods
 --------------------------------------------------------------
 
 ==============================================================
