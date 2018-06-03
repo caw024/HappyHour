@@ -6,9 +6,9 @@ HW57 -- Changes in Latitude, Changes in Attitude
 PLAN:
 
 CORE:
-- Make a sudoku solver class or method in existing sudoku class
+- Make a sudoku solver class and methods in existing sudoku class
 |
--> Improve robustness and functionality of our classes.
+-> Improve robustness and functionality of our classes
 
 NON-ESSENTIAL:
 - Make an empty sudoku puzzle for user to solve.
