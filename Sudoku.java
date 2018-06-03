@@ -1,8 +1,11 @@
 public class Sudoku{
+    
     private Square[][] s;
+    
     public Sudoku(){
 	s = new Square[3][3];
     }
+    
     public boolean checkRow(int r){
 	int[] row = new int[9];
 	int[] row2 = new int[3];
@@ -22,6 +25,7 @@ public class Sudoku{
 	}
 	return true;
     }
+    
     public boolean checkCol(int c){
 	int[] col = new int[9];
 	int[] col2 = new int[3];
@@ -41,9 +45,11 @@ public class Sudoku{
 	}
 	return true;
     }
+    
     public boolean checkSquare(int r, int c){
 	return s[r][c].isValid();
     }
+    
     public boolean isFilled(){
 	for (int r = 0; r < 3; r++){
 	    for (int c = 0; c < 3; c++){
@@ -56,6 +62,14 @@ public class Sudoku{
 		return false;
 	}
 	return true;
+    }
+    
+    public void setOriginal(){
+	for (Square[] a: s){
+	    for (Square b: Square[] a){
+		b.setOriginal();
+	    }
+	}
     }
     
 }

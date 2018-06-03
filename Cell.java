@@ -1,10 +1,24 @@
 public class Cell{
-    public int value = 0;
+    private int value;
+    private boolean original;
+    public Cell{
+	value = 0;
+	original = false;
+    }
     public int getValue(){
 	if (value != 0)
 	    return value;
     }
-    public void setvalue(int input){
+    public void setValue(int input){
 	value = input;
+    }
+    public void setOriginal(){
+	if (value != 0)
+	    original = true;
+	else
+	    original = false;
+    }
+    public boolean originalSquare(){
+	return original;
     }
 }

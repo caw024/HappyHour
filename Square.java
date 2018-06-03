@@ -1,5 +1,5 @@
 public class Square{
-    public Cell[][] s;
+    private Cell[][] s;
     public Square(){
 	s = new Cell[3][3];
     }
@@ -33,5 +33,12 @@ public class Square{
 	    col[r] = s[r][c].getValue();
 	}
 	return col;
+    }
+    public void setOriginal(){
+	for (Cell[] a: s){
+	    for (Cell b: Cell[] a){
+		b.setOriginal();
+	    }
+	}
     }
 }
