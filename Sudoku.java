@@ -13,6 +13,8 @@ public class Sudoku{
 	for (int c = 0; c < 3; c++){
 	    row2 = s[r][c].getRow(r);
 	    for (int i: row2){
+		if (i == 0)
+		    return false;
 		row[a] = i;
 		a++;
 	    }
@@ -33,6 +35,8 @@ public class Sudoku{
 	for (int r = 0; r < 3; r++){
 	    col2 = s[r][c].getCol(c);
 	    for (int i: col2){
+		if (i == 0)
+		    return false;
 		col[a] = i;
 		a++;
 	    }
@@ -47,7 +51,7 @@ public class Sudoku{
     }
     
     public boolean checkSquare(int r, int c){
-	return s[r][c].isValid();
+	return s[r][c].checkSquare();
     }
     
     public boolean isFilled(){
@@ -117,5 +121,9 @@ public class Sudoku{
 	return foo;
     }
 
-    
+    public Square[][] solve(){
+	while (!isFilled()){
+	    
+	}
+    }
 }

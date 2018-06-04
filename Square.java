@@ -3,11 +3,13 @@ public class Square{
     public Square(){
 	s = new Cell[3][3];
     }
-    public boolean isValid(){
+    public boolean checkSquare(){
 	int[] a = new int[9];
 	int i = 0;
 	for (int r = 0; r < 3; r++){
 	    for (int c = 0; c < 3; c++){
+		if (s[r][c].getValue() == 0)
+		    return false;
 		a[i] = s[r][c].getValue();
 		i++;
 	    }
