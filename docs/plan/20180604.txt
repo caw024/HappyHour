@@ -5,7 +5,7 @@ HW57 -- Changes in Latitude, Changes in Attitude
 
 CURRENT STATUS:
 - Classes and the essential methods leading up to the recursive step are written
-- We are upto date with the current mandatory documents
+- We are up to date with the current mandatory documents
 
 PLAN:
 
