@@ -71,5 +71,51 @@ public class Sudoku{
 	    }
 	}
     }
+	
+	//prints the current sudoku puzzle
+    public String toString() 
+    {
+	String foo = "\nTic Tac Toe Board:\n    ";
+	for (int i = 0; i < size(); i++){
+	    foo += i + 1  + " ";
+	    if ((i + 1) % 3 == 0)
+		foo += "  ";
+	}
+	
+	foo += "\n";
+	
+	for( int i = 0; i < size(); i++ ) {
+	    foo += i+1  + " | ";
+	
+	    for( int j=0; j < size(); j++ ) {
+		foo += _matrix[i][j]; //get(i+1,j+1)
+		if ((j+1) % 3 == 0){
+		    foo += " |";
+		}
+		foo += " ";
+	    }
+	    foo += "\n";
+	    if ((i + 1) % 3 == 0)
+		foo += "\n";
+	}
+
+	if (_final.length == 3){
+	    foo += "\nFinal matrix\n";
+	    for( int i = 0; i < 3; i++ ) {
+		foo += " | ";
+	
+		for( int j=0; j < 3; j++ ) {
+		    foo += _final[i][j] + " "; //get(i+1,j+1)
+		}
+
+		foo += "|\n";
+
+	    }
+	}
+
+	
+	return foo;
+    }
+
     
 }
