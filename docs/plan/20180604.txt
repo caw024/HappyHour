@@ -12,6 +12,7 @@ PLAN:
 CORE:
 - Make a driver to begin seeing code in action (we need to think of a solid recursion)
 - Improve the robustness and functionality of our class (i.e. exception errors)
+- Improve readability of code (whitespace + comments)
 
 NON-ESSENTIAL:
 - Records time of computer to solve puzzle
