@@ -18,14 +18,15 @@ Algorithm:
 The algorithm for solving the sudoku puzzle we will implement is similar to 
 the queen rows algorithm because each row can only have one of each letter,
 just like each row on a chess board can only have one queen if you were to try
-to place n number of queens on a nxn board.
+to place n number of queens on a nxn board. We will be using recursive backtracking
+to solve this puzzle.
 
 How to Launch:
 - First, either clone or download the root folder. Do this by navigating to the 
 repository, then click the clone or download option. Clone by copying the ssh 
-link, then opening a terminal session and typing in `git clone 
-linktorepo@username`.
-- Next, in the terminal, you can navigate to the new repository by typing in `cd 
-pathtorepo`.
-- Finally, you type in `javac SudokuSolve.java` to compile all the files, before
-typing `java SudokuSolve`.
+link, then opening a terminal session and typing in 
+`$ git clone linktorepo@username`.
+- Next, in the terminal, you can navigate to the new repository by typing in 
+`$ cd pathtorepo`.
+- Finally, you type in `$ javac SudokuSolve.java` to compile all the files, before
+typing `$ java SudokuSolve`.
