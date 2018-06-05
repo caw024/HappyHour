@@ -1,13 +1,13 @@
 # HappyHour
 ## Calvin Aw, Kendrick Liang and Zane Wang
-# APCS1 pd02
+## APCS1 pd02
 
 ### SUDOKU SOLVER
 
 Plan:
 We intend to use a sudoku puzzle from online, and make an algorithm to
 solve the sudoku puzzle. Because sudoku is a recursive puzzle, the algorithm 
-will be relatively simple. However, we will have to account for all the rows,
+will be relatively straightforward. However, we will have to account for all the rows,
 columns, and 3 by 3 sections of the puzzle.
 
 Project:
