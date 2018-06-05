@@ -30,4 +30,4 @@ link, then opening a terminal session and typing in
 - Next, in the terminal, you can navigate to the new repository by typing in 
 `$ cd pathtorepo`.
 - Finally, you type in `$ javac SudokuSolve.java` to compile all the files, before
-typing `$ java SudokuSolve`.
+typing `$ java SudokuSolve` to run it.
