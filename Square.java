@@ -38,7 +38,7 @@ public class Square{
     }
     public void setOriginal(){
 	for (Cell[] a: s){
-	    for (Cell b: Cell[] a){
+	    for (Cell b: a){
 		b.setOriginal();
 	    }
 	}

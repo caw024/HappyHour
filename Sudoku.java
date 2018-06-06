@@ -70,7 +70,7 @@ public class Sudoku{
     
     public void setOriginal(){
 	for (Square[] a: s){
-	    for (Square b: Square[] a){
+	    for (Square b: a){
 		b.setOriginal();
 	    }
 	}
@@ -80,7 +80,7 @@ public class Sudoku{
     public String toString() 
     {
 	String foo = "\nTic Tac Toe Board:\n    ";
-	for (int i = 0; i < size(); i++){
+	for (int i = 0; i < s.length; i++){
 	    foo += i + 1  + " ";
 	    if ((i + 1) % 3 == 0)
 		foo += "  ";
@@ -88,11 +88,11 @@ public class Sudoku{
 	
 	foo += "\n";
 	
-	for( int i = 0; i < size(); i++ ) {
+	for( int i = 0; i < s.length; i++ ) {
 	    foo += i+1  + " | ";
 	
-	    for( int j=0; j < size(); j++ ) {
-		foo += _matrix[i][j]; //get(i+1,j+1)
+	    for( int j=0; j < s.length; j++ ) {
+		foo += s[i][j]; //get(i+1,j+1)
 		if ((j+1) % 3 == 0){
 		    foo += " |";
 		}
@@ -103,13 +103,13 @@ public class Sudoku{
 		foo += "\n";
 	}
 
-	if (_final.length == 3){
+	if (s.length == 3){
 	    foo += "\nFinal matrix\n";
 	    for( int i = 0; i < 3; i++ ) {
 		foo += " | ";
 	
 		for( int j=0; j < 3; j++ ) {
-		    foo += _final[i][j] + " "; //get(i+1,j+1)
+		    foo += s[i][j] + " "; //get(i+1,j+1)
 		}
 
 		foo += "|\n";
