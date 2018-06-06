@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Sudoku{
     
     private Square[][] s;
@@ -53,6 +55,40 @@ public class Sudoku{
     public boolean checkSquare(int r, int c){
 	return s[r][c].checkSquare();
     }
+
+    public ArrayList<Integer> ridShare(int[] keep, ArrayList<integer> edit){
+	for (int i = 0; i < keep.length; i++){
+	    for (int k = 0; k < edit.size(); k++){
+		if (keep[i] == edit.get(k))
+			edit.set(k, 0);
+	    }
+	}
+	    	
+	for (int i = edit.size() - 1; i >= 0; i--){
+	    if (edit.get(i) == 0)
+		edit.remove(i);
+	}
+	return edit;
+    }
+
+    public ArrayList<Integer> legalMove(int r, int c){
+	ArrayList<Integer> poss = new ArrayList<Integer>();
+	poss.add(1);
+	poss.add(2);
+	poss.add(3);
+	poss.add(4);
+	poss.add(5);
+	poss.add(6);
+	poss.add(7);
+	poss.add(8);
+	poss.add(9);
+
+	poss = ridShare(s.getRow(r), poss);
+	poss = ridShare(s.getColumn(c), poss);
+	poss = ridShare(s[r][c].getSquare(), poss);
+
+        return poss;
+    }
     
     public boolean isFilled(){
 	for (int r = 0; r < 3; r++){
@@ -75,54 +111,17 @@ public class Sudoku{
 	    }
 	}
     }
-	
-	//prints the current sudoku puzzle
-    public String toString() 
-    {
-	String foo = "\nTic Tac Toe Board:\n    ";
-	for (int i = 0; i < s.length; i++){
-	    foo += i + 1  + " ";
-	    if ((i + 1) % 3 == 0)
-		foo += "  ";
-	}
-	
-	foo += "\n";
-	
-	for( int i = 0; i < s.length; i++ ) {
-	    foo += i+1  + " | ";
-	
-	    for( int j=0; j < s.length; j++ ) {
-		foo += s[i][j]; //get(i+1,j+1)
-		if ((j+1) % 3 == 0){
-		    foo += " |";
-		}
-		foo += " ";
-	    }
-	    foo += "\n";
-	    if ((i + 1) % 3 == 0)
-		foo += "\n";
-	}
-
-	if (s.length == 3){
-	    foo += "\nFinal matrix\n";
-	    for( int i = 0; i < 3; i++ ) {
-		foo += " | ";
-	
-		for( int j=0; j < 3; j++ ) {
-		    foo += s[i][j] + " "; //get(i+1,j+1)
-		}
-
-		foo += "|\n";
-
-	    }
-	}
-
-	
-	return foo;
-    }
+    
     public Square[][] solve(){
     	while (!isFilled()){
-	    
-    	}
+	    for (int r = 0; r < 3; r++){
+		for (int c = 0; c < 3; c++){
+		    if (legalMove(r,c).size() == 0){
+			if (r
+		    }
+       
+		}
+	    }
+	}
     }
 }
