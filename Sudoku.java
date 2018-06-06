@@ -120,10 +120,9 @@ public class Sudoku{
 	
 	return foo;
     }
-
     public Square[][] solve(){
-	while (!isFilled()){
+    	while (!isFilled()){
 	    
-	}
+    	}
     }
 }
