@@ -119,3 +119,27 @@ Moved plans folder inside docs.
 Zane Wang
 Made new plan for 2018-06-04.
 --------------------------------------------------------------
+
+==============================================================
+2018-06-03
+Calvin Aw and Kendrick Liang
+Developed a Driver.java
+--------------------------------------------------------------
+
+==============================================================
+2018-06-05
+Zane Wang and Kendrick Liang 
+Revised Cell.java and Square.java so that they compile correctly now
+--------------------------------------------------------------
+
+==============================================================
+2018-06-05
+Calvin Aw, Kendrick Liang, and Zane Wang
+Implemented backtrack recursion into the solve method in Sudoku.java
+--------------------------------------------------------------
+
+==============================================================
+2018-06-06
+Zane Wang
+Updated devlog to reflect changes in Cell, Square and Sudoku.java
+--------------------------------------------------------------
