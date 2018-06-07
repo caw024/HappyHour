@@ -112,16 +112,23 @@ public class Sudoku{
 	}
     }
     
-    public Square[][] solve(){
-    	while (!isFilled()){
-	    for (int r = 0; r < 3; r++){
-		for (int c = 0; c < 3; c++){
-		    if (legalMove(r,c).size() == 0){
-			if (r
-		    }
-       
+    public boolean solve(){
+	ArrayList<Integer> poss = new ArrayList<Integer>();
+	for (int r = 0; r < 3; r++){
+	    for (int c = 0; c < 3; c++){
+		poss = legalMove(r,c);
+		if (poss.size() == 0){
+		    //remove last piece
 		}
+		else{
+		    
+		}
+		else{
+		    
+		}
+       
 	    }
 	}
+	
     }
 }
