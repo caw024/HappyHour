@@ -1,4 +1,6 @@
 import cs1.Keyboard;
+import java.io.*;
+import java.util.*;
 
 public class Driver{
     public static void main(String[] args){
@@ -25,7 +27,7 @@ public class Driver{
 
 	
 	    if (hi == 1){
-		Sudoku yay = new Sudoku();
+		Sudoku yay = new Sudoku("Easy.csv");
 		//clear screen using ANSI control code
 		System.out.println( "[2J" ); 
 
@@ -56,7 +58,7 @@ public class Driver{
 	    }
 	    
 	    else if (hi == 2){
-		Sudoku yay = new Sudoku();
+		Sudoku yay = new Sudoku("Hard.csv");
 		int m;
 		//clear screen using ANSI control code
 		System.out.println( "[2J" ); 

@@ -1,8 +1,12 @@
+import java.io.*;
+import java.util.*;
+import java.util.Scanner;
+
 public class Sudoku{
     
     private Cell[][] s;
     
-    public Sudoku(){
+    public Sudoku(String inputFile){
 	s = new Cell[9][9];
 
 	for (int r = 0; r < 9; r++){
@@ -11,12 +15,10 @@ public class Sudoku{
 	    }
 	}
 
-	int h, w;
-	h = 0;
-	w = 0;
    //transcribe maze from file into memory
     try {
 	    Scanner sc = new Scanner( new File(inputFile) );
+	    sc.useDelimiter(",");
 
 	    System.out.println( "reading in file..." );
 
@@ -26,20 +28,15 @@ public class Sudoku{
 
 		String line = sc.nextLine();
 
-		if ( w < line.length() ) 
-		    w = line.length();
+		for( int i=0; i < line.length(); i++ ){
+		    if (!sc.next().equals(0))
+			s[i][row] = new Cell(Integer.parseInt(sc.next()));
+		}
 
-		for( int i=0; i<line.length(); i++ )
-		    s[i][row] = line.charAt( i );
-
-		h++;
 		row++;
-	    } 
+	    }
 
-	    for( int i=0; i<w; i++ )
-		s[i][row] = 0;
-	    h++;
-	    row++;
+	    sc.close();
 
     }
     catch( Exception e ) { System.out.println( "Error reading file" ); }
