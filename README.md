@@ -31,3 +31,5 @@ link, then opening a terminal session and typing in
 `$ cd pathtorepo`.
 - Finally, you type in `$ javac SudokuSolve.java` to compile all the files, before
 typing `$ java SudokuSolve` to run it.
+
+Special thanks to tomstewart89 for the Sudoku csv files!
