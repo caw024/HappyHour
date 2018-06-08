@@ -25,27 +25,23 @@ public class Driver{
 
 	
 	    if (hi == 1){
-		TicTacToe yay = new TicTacToe();
+		Sudoku yay = new Sudoku();
+		int k;
 		while (true){
-		    yay.setup3();
-		    yay.rules3();
-		    System.out.print(yay);
-		    yay.play3();
+		    yay.solve();
 		    System.out.println("What do you want to do next?\n1. Play again\n2. I'm done");
 		    try{
-			hi = Keyboard.readInt();
-			if (hi == 1){
+			k = Keyboard.readInt();
+			if (k == 1){
 			    System.out.println( "\nCool!\n" );
 			}
 
-			if (hi == 2){
+			if (k == 2){
 			    System.out.println( "\nAlright!\n" );
-			    String[] c = new String[1];
-			    MiniDesktop.main(c);
-
+			    break;
 			}
 			
-			else if (hi > 3 || hi < 0){
+			else if (k > 3 || k  < 0){
 			    throw new IllegalArgumentException("Integer not within range, try again!");
 			}
 		    }
@@ -54,23 +50,20 @@ public class Driver{
 	    }
 	    
 	    else if (hi == 2){
-		TicTacToe yay = new TicTacToe(9);
+		Sudoku yay = new Sudoku();
+		int m;
 		while (true){
-		    yay.setup9();
-		    yay.rules9();
-		    System.out.print(yay);
-		    yay.play9();
-		    System.out.println("What do you want to do next?\n1. Play again\n2. I'm done");
+		    yay.solve()
+			System.out.println("What do you want to do next?\n1. Play again\n2. I'm done");
 		    try{
-			hi = Keyboard.readInt();
-			if (hi == 1){
+			m = Keyboard.readInt();
+			if (m == 1){
 			    System.out.println( "\nCool!\n" );
 			}
 
-			if (hi == 2){
+			if (m == 2){
 			    System.out.println( "\nAlright!\n" );
-			    String[] c = new String[1];
-			    MiniDesktop.main(c);
+			    break;
 
 			}
 			
@@ -86,7 +79,6 @@ public class Driver{
 		System.out.println("Requires an integer input");
 	    }
 	}
-	Sudoku s = new Sudoku();
-	s.solve();
+
     }
 }
