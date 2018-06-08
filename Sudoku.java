@@ -18,7 +18,7 @@ public class Sudoku{
 
 	    System.out.println( "reading in file..." );
 
-	    int row = 0;
+	    int col = 0;
 	    String sub;
 	    
 	    while( sc.hasNext() ) {
@@ -27,10 +27,10 @@ public class Sudoku{
 		
 				
 	       	for( int i = 0; i < 9; i++ ){
-		    s[i][row] = new Cell(Integer.parseInt(sub));	    
+		    s[i][col] = new Cell(Integer.parseInt(sub));	    
 	       	}
 
-		row++;
+		col++;
 	    }
 
 	    sc.close();
@@ -189,7 +189,15 @@ public class Sudoku{
 	    else if ( solveH(c + 1) ) {
 		return true;
 	    }
+<<<<<<< HEAD
 	    else{
+=======
+	    else {
+		if (c == 0) {
+		    r = r - 1;
+		    c = 8;
+		}
+>>>>>>> eb11b47fe937e00d6015636301ed8c94b84e52d0
 		removeValue(r,c);
 
 		if (r == 0 && c >= 1){

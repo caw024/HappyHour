@@ -17,7 +17,7 @@ public class Driver{
 			break;
 		    }
 		
-		    else if (hi > 2){
+		    else if (hi > 2 || hi < 1){
 			throw new IllegalArgumentException("Integer not within range, try again!");
 		    }
 		}
@@ -36,6 +36,11 @@ public class Driver{
 
 		//display board
 
+<<<<<<< HEAD
+=======
+		//display board 
+		//System.out.println( yay );
+>>>>>>> eb11b47fe937e00d6015636301ed8c94b84e52d0
 		int k;
 		while (true){
 		    yay.solve();
@@ -53,7 +58,7 @@ public class Driver{
 			    return;
 			}
 			
-			else if (k > 3 || k  < 0){
+			else if (k >= 3 || k <= 0){
 			    throw new IllegalArgumentException("Integer not within range, try again!");
 			}
 		    }
