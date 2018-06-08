@@ -53,8 +53,8 @@ public class Driver{
 		Sudoku yay = new Sudoku();
 		int m;
 		while (true){
-		    yay.solve()
-			System.out.println("What do you want to do next?\n1. Play again\n2. I'm done");
+		    yay.solve();
+		    System.out.println("What do you want to do next?\n1. Play again\n2. I'm done");
 		    try{
 			m = Keyboard.readInt();
 			if (m == 1){
