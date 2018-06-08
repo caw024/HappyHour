@@ -5,19 +5,16 @@ public class Cell{
 	value = 0;
 	original = false;
     }
+    public Cell(int newVal){
+	value = newVal;
+	original = true;
+    }
     public int getValue(){
-	if (value != 0)
-	    return value;
 	return value;
     }
     public void setValue(int input){
-	value = input;
-    }
-    public void setOriginal(){
-	if (value != 0)
-	    original = true;
-	else
-	    original = false;
+	if (!originalSquare())
+	    value = input;
     }
     public boolean originalSquare(){
 	return original;
