@@ -39,11 +39,12 @@ public class Driver{
 			k = Keyboard.readInt();
 			if (k == 1){
 			    System.out.println( "\nCool!\n" );
+			    break;
 			}
 
 			if (k == 2){
 			    System.out.println( "\nAlright!\n" );
-			    break;
+			    return;
 			}
 			
 			else if (k > 3 || k  < 0){
@@ -57,6 +58,11 @@ public class Driver{
 	    else if (hi == 2){
 		Sudoku yay = new Sudoku();
 		int m;
+		//clear screen using ANSI control code
+		System.out.println( "[2J" ); 
+
+		//display board 
+		System.out.println( yay );
 		while (true){
 		    yay.solve();
 		    System.out.println("What do you want to do next?\n1. Play again\n2. I'm done");
@@ -64,11 +70,12 @@ public class Driver{
 			m = Keyboard.readInt();
 			if (m == 1){
 			    System.out.println( "\nCool!\n" );
+			    break;
 			}
 
 			if (m == 2){
 			    System.out.println( "\nAlright!\n" );
-			    break;
+			    return;
 
 			}
 			

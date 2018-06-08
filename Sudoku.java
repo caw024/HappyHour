@@ -4,14 +4,45 @@ public class Sudoku{
     
     public Sudoku(){
 	s = new Cell[9][9];
-	for (int a = 0; a < 18; a++){
-	    s[(int)(Math.random() * 9)][(int)(Math.random() * 9)] = new Cell((int)(Math.random() * 8) + 1);
-	}
+
 	for (int r = 0; r < 9; r++){
 	    for (int c = 0; c < 9; c++){
 		s[r][c] = new Cell();
 	    }
 	}
+
+	int h, w;
+	h = 0;
+	w = 0;
+   //transcribe maze from file into memory
+    try {
+	    Scanner sc = new Scanner( new File(inputFile) );
+
+	    System.out.println( "reading in file..." );
+
+	    int row = 0;
+
+	    while( sc.hasNext() ) {
+
+		String line = sc.nextLine();
+
+		if ( w < line.length() ) 
+		    w = line.length();
+
+		for( int i=0; i<line.length(); i++ )
+		    s[i][row] = line.charAt( i );
+
+		h++;
+		row++;
+	    } 
+
+	    for( int i=0; i<w; i++ )
+		s[i][row] = 0;
+	    h++;
+	    row++;
+
+    }
+    catch( Exception e ) { System.out.println( "Error reading file" ); }
     }
     
     public boolean checkRow(int r){
