@@ -8,7 +8,7 @@ public class Driver{
 	int hi = 0;
 	while (true){
 	    while (true){
-		System.out.println("\nDo you want to see\n\n1: Easy\n2: Hard");
+		System.out.println("\nDo you want to play\n\n1: Easy\n2: Hard");
 	    
 		try{
 		    hi = Keyboard.readInt();
@@ -40,7 +40,7 @@ public class Driver{
 		while (true){
 		    yay.solve();
 		    yay.printArr();
-		    System.out.println("What do you want to do next?\n1. Watch again\n2. I'm done");
+		    System.out.println("What do you want to do next?\n1. Play again\n2. I'm done");
 		    try{
 			k = Keyboard.readInt();
 			if (k == 1){
@@ -70,7 +70,7 @@ public class Driver{
 		while (true){
 		    yay2.solve();
 		    yay2.printArr();
-		    System.out.println("What do you want to do next?\n1. Watch again\n2. I'm done");
+		    System.out.println("What do you want to do next?\n1. Play again\n2. I'm done");
 		    try{
 			m = Keyboard.readInt();
 			if (m == 1){
