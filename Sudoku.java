@@ -43,6 +43,7 @@ public class Sudoku{
     }
     
     public boolean checkRow(int r){
+	// checks if a row is valid - no duplicates or out of range
 	int[] row = new int[9];
 	for (int c = 0; c < 9; c++)
 	    row[c] = s[r][c].getValue();
@@ -56,6 +57,7 @@ public class Sudoku{
     }
     
     public boolean checkCol(int c){
+	//chekcs if a column is valid
 	int[] col = new int[9];
 	for (int r = 0; r < 9; r++)
 	    col[r] = s[r][c].getValue();
@@ -69,6 +71,7 @@ public class Sudoku{
     }
     
     public boolean checkSquare(int r, int c){
+	//checks all 3by3 squares in a sudoku puzzle if valid
 	int[] sqr = new int[9];
 	if (r >= 0 && r <= 2 && c >= 0 && c <= 2){
 	    int i = 0;
@@ -161,6 +164,7 @@ public class Sudoku{
     }
     
     public boolean isFilled(){
+	// checks if the puzzle is full, no more 0s
 	for (int r = 0; r < 9; r++){
 	    for (int c = 0; c < 9; c++){
 		if (s[r][c].getValue() == 0)
@@ -175,6 +179,8 @@ public class Sudoku{
     }
 
     private boolean solveH(int c){
+	//add the next move, if last one then true otherwise, if next can be
+	//solved then true, if not solved, then false
 	for (int r = 0; r < s.length; r++){
 	    addValue(r,c);
 	    if ( c == s.length-1 ) { 
@@ -191,6 +197,7 @@ public class Sudoku{
     }
     
     private boolean addValue( int r, int c){
+	// adds a value not in this square, row or column
 	if (s[r][c].originalSquare())
 	    return false;
 	while ((!checkRow(r) || !checkCol(c) || !checkSquare(r, c)) && s[r][c].getValue() < 9)
