@@ -175,38 +175,34 @@ public class Sudoku{
     }
         
     public boolean solve(){
-	return solveH(0);
+	return solveH(0, 0);
     }
 
-    private boolean solveH(int c){
+    private boolean solveH(int r, int c){
 	//add the next move, if last one then true otherwise, if next can be
 	//solved then true, if not solved, then false
-	for (int r = 0; r < s.length; r++){
-	    addValue(r,c);
-	    if ( c == s.length-1 ) { 
-		return true;
-	    }
-	    else if ( solveH(c + 1) ) {
-		return true;
-	    }
-<<<<<<< HEAD
-	    else{
-=======
-	    else {
-		if (c == 0) {
-		    r = r - 1;
-		    c = 8;
-		}
->>>>>>> eb11b47fe937e00d6015636301ed8c94b84e52d0
-		removeValue(r,c);
-
-		if (r == 0 && c >= 1){
-		    r = 8;
-		    c -= 1;
-		}
-		
-	    }
+	if ( c == 8 && r == 8) { 
+	    return true;
 	}
+	if (c == 8 && s[r][c].originalSquare())
+	    return solveH(r+1,0);
+	    
+	if (s[r][c].originalSquare())
+	    return solveH(r,c+1);
+	
+	addValue(r,c);
+
+	if ( c < 8 ) {
+	    return solveH(r,c+1);
+	}
+	else if ( c == 8 ){
+	    return solveH(r+1,0);
+	}
+
+	else {
+	    removeValue(r,c);
+	}
+	
 	return false;
     }
     
@@ -223,6 +219,8 @@ public class Sudoku{
     private boolean removeValue(int r, int c){
 	//sets a value to zero
 	if (s[r][c].getValue() == 0)
+	    return false;
+	if (s[r][c].originalSquare() == true)
 	    return false;
 	s[r][c].setValue(0);
 	return true;

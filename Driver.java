@@ -36,11 +36,6 @@ public class Driver{
 
 		//display board
 
-<<<<<<< HEAD
-=======
-		//display board 
-		//System.out.println( yay );
->>>>>>> eb11b47fe937e00d6015636301ed8c94b84e52d0
 		int k;
 		while (true){
 		    yay.solve();
