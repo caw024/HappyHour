@@ -10,44 +10,35 @@ public class Sudoku{
     public Sudoku(String inputFile){
 	s = new Cell[9][9];
 
-	for (int r = 0; r < 9; r++){
-	    for (int c = 0; c < 9; c++){
-		s[r][c] = new Cell();
-	    }
-	}
 
-   //transcribe maze from file into memory
-    try {
+	//transcribe maze from file into memory
+	try {
 	    Scanner sc = new Scanner( new File(inputFile) );
 	    sc.useDelimiter(",");
 
 	    System.out.println( "reading in file..." );
 
 	    int row = 0;
-
+	    String sub;
+	    
 	    while( sc.hasNext() ) {
-		System.out.println(sc.next());
+		sub = sc.next();
+		System.out.print(sub);
 		
-		String line = sc.nextLine();
-		
-		for( int i=0; i < line.length(); i++ ){
-		    System.out.print("a");
-		    /*
-		    if (! (Integer.parseInt(sc.next()) == 0) )
-			s[i][row] = new Cell(Integer.parseInt(sc.next()));
-		    */
-		}
-		
+				
+	       	for( int i = 0; i < 9; i++ ){
+		    s[i][row] = new Cell(Integer.parseInt(sub));	    
+	       	}
 
 		row++;
 	    }
 
 	    sc.close();
 
-    }
-    catch( Exception e ) {
-    	System.out.println("File not found");
-}
+	}
+	catch( Exception e ) {
+	    System.out.println("File not found");
+	}
  
     }
     
@@ -224,8 +215,8 @@ public class Sudoku{
 
 	for (int r = 0; r < 9; r++){
 	    for (int c = 0; c < 9; c++){
-		retStr += Integer.toString(s[r][c].getValue());
-		retStr += "   ";
+		retStr += s[r][c].getValue();
+		retStr += "  ";
 	    }
 	    retStr += "\n";
 	}

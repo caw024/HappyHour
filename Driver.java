@@ -59,15 +59,15 @@ public class Driver{
 	    }
 	    
 	    else if (hi == 2){
-		Sudoku yay = new Sudoku("Hard.csv");
+		Sudoku yay2 = new Sudoku("Hard.csv");
 		int m;
 		//clear screen using ANSI control code
 		System.out.println( "[2J" ); 
 
 		//display board 
-		System.out.println( yay );
+		System.out.println( yay2 );
 		while (true){
-		    yay.solve();
+		    yay2.solve();
 		    System.out.println("What do you want to do next?\n1. Play again\n2. I'm done");
 		    try{
 			m = Keyboard.readInt();
