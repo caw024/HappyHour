@@ -158,12 +158,13 @@ public class Sudoku{
     }
     
     private boolean addValue( int r, int c){
-	if (s[r][c].originalValue())
+	if (s[r][c].originalSquare())
 	    return false;
 	while ((!checkRow(r) || !checkCol(c) || !checkSquare(r, c)) && s[r][c].getValue() < 9)
 	    s[r][c].setValue(s[r][c].getValue() + 1);
 	if (checkRow(r) && checkCol(c) && checkSquare(r, c))
 	    return true;
+	return false;
     }
     
     private boolean removeValue(int r, int c){
