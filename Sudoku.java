@@ -189,7 +189,11 @@ public class Sudoku{
 	    else if ( solveH(c + 1) ) {
 		return true;
 	    }
-	    else { 
+	    else {
+		if (c == 0) {
+		    r = r - 1;
+		    c = 8;
+		}
 		removeValue(r,c);
 	    }
 	}

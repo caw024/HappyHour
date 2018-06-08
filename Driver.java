@@ -17,7 +17,7 @@ public class Driver{
 			break;
 		    }
 		
-		    else if (hi > 2){
+		    else if (hi > 2 || hi < 1){
 			throw new IllegalArgumentException("Integer not within range, try again!");
 		    }
 		}
@@ -50,7 +50,7 @@ public class Driver{
 			    return;
 			}
 			
-			else if (k > 3 || k  < 0){
+			else if (k >= 3 || k <= 0){
 			    throw new IllegalArgumentException("Integer not within range, try again!");
 			}
 		    }
