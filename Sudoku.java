@@ -7,6 +7,11 @@ public class Sudoku{
 	for (int a = 0; a < 18; a++){
 	    s[(int)(Math.random() * 9)][(int)(Math.random() * 9)] = new Cell((int)(Math.random() * 8) + 1);
 	}
+	for (int r = 0; r < 9; r++){
+	    for (int c = 0; c < 9; c++){
+		s[r][c] = new Cell();
+	    }
+	}
     }
     
     public boolean checkRow(int r){
@@ -182,7 +187,7 @@ public class Sudoku{
 
 	for (int r = 0; r < 9; r++){
 	    for (int c = 0; c < 9; c++){
-		retStr += Integer.toString(s[r][c]);
+		retStr += Integer.toString(s[r][c].getValue());
 		retStr += "   ";
 	    }
 	    retStr += "\n";

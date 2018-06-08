@@ -26,6 +26,11 @@ public class Driver{
 	
 	    if (hi == 1){
 		Sudoku yay = new Sudoku();
+		//clear screen using ANSI control code
+		System.out.println( "[2J" ); 
+
+		//display board 
+		System.out.println( yay );
 		int k;
 		while (true){
 		    yay.solve();
