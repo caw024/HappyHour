@@ -2,6 +2,7 @@ import java.io.*;
 import java.util.*;
 import java.util.Scanner;
 
+
 public class Sudoku{
     
     private Cell[][] s;
@@ -25,13 +26,18 @@ public class Sudoku{
 	    int row = 0;
 
 	    while( sc.hasNext() ) {
-
+		System.out.println(sc.next());
+		
 		String line = sc.nextLine();
-
+		
 		for( int i=0; i < line.length(); i++ ){
-		    if (!sc.next().equals(0))
+		    System.out.print("a");
+		    /*
+		    if (! (Integer.parseInt(sc.next()) == 0) )
 			s[i][row] = new Cell(Integer.parseInt(sc.next()));
+		    */
 		}
+		
 
 		row++;
 	    }
@@ -39,7 +45,10 @@ public class Sudoku{
 	    sc.close();
 
     }
-    catch( Exception e ) { System.out.println( "Error reading file" ); }
+    catch( Exception e ) {
+    	System.out.println("File not found");
+}
+ 
     }
     
     public boolean checkRow(int r){
