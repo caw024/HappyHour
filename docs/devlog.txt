@@ -2,12 +2,9 @@ HappyHour
 Calvin Aw
 Kendrick Liang
 Zane Wang
-pd 01
+Pd 01
 ---------------------
 Sudoku
-
-
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 USAGE:
 * Replace all fields, angle brackets included, with specified info.
@@ -32,32 +29,32 @@ Flesh out each category whenever necessary, appropriate.
 ------------------------------------------
 OBSTACLES OVERCOME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<Wow, we so BOSS bc...>
+We managed to code in all the 3x3 squares!
+We used backtracking recursion!
+We used Scanner to have more interaction with the user!
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<
-blah blah pesky bug...
-
->
+We haven't found a faster way to solve the sudoku.
+We can't find what is preventing the sudoku puzzle from printing.
+We can't figure out how to make the constructor take in a csv file.
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<wow! oo! etc!...>
+We reviewed csv files!
+We reviewed Keyboard.java!
+We reviewed Scanner.java!
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-We changed ___ to ___ bc...
-<etc>
-<etc>
+We removed Square.java because we realized we could code the necessary 
+instructions into checkSquare().
 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<tales of wisdom gained...>
-||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
+Coding is hard.
+Communication is important!
+Read changes in code before editing!
 
  ______   ______   __   __   __       ______   _______     
 /_____/\ /_____/\ /_/\ /_/\ /_/\     /_____/\ /______/\    
@@ -142,4 +139,17 @@ Implemented backtrack recursion into the solve method in Sudoku.java
 2018-06-06
 Zane Wang
 Updated devlog to reflect changes in Cell, Square and Sudoku.java
+--------------------------------------------------------------
+
+==============================================================
+2018-06-07&08
+Calvin Aw, Kendrick Liang, and Zane Wang
+Updated algorithm and Driver.java, updated Sudoku.java to fit Driver.java, as
+well as updated uml.pdf and flow.pdf
+--------------------------------------------------------------
+
+==============================================================
+2018-06-08
+Zane Wang
+Updated devlog
 --------------------------------------------------------------

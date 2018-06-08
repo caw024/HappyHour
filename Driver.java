@@ -33,7 +33,7 @@ public class Driver{
 		System.out.println( "[2J" ); 
 
 		//display board 
-		System.out.println( yay );
+		//System.out.println( yay );
 		int k;
 		while (true){
 		    yay.solve();
