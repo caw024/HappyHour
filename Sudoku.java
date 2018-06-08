@@ -221,6 +221,7 @@ public class Sudoku{
     }
     
     private boolean removeValue(int r, int c){
+	//sets a value to zero
 	if (s[r][c].getValue() == 0)
 	    return false;
 	s[r][c].setValue(0);
