@@ -188,6 +188,6 @@ public class Sudoku{
 	    retStr += "\n";
 	}
 
-	return retStr
+	return retStr;
     }
 }
