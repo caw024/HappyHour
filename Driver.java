@@ -29,11 +29,13 @@ public class Driver{
 	
 	    if (hi == 1){
 		Sudoku yay = new Sudoku("Easy.csv");
-		//clear screen using ANSI control code
-		System.out.println( "[2J" ); 
 
-		//display board 
-		System.out.println( yay );
+		//clear screen using ANSI control code
+		System.out.println( "[2J" );
+
+
+		//display board
+
 		int k;
 		while (true){
 		    yay.solve();
@@ -64,8 +66,6 @@ public class Driver{
 		//clear screen using ANSI control code
 		System.out.println( "[2J" ); 
 
-		//display board 
-		System.out.println( yay2 );
 		while (true){
 		    yay2.solve();
 		    System.out.println("What do you want to do next?\n1. Play again\n2. I'm done");
