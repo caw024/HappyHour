@@ -1,6 +1,7 @@
 import java.io.*;
 import java.util.*;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 
 public class Sudoku{
@@ -37,7 +38,7 @@ public class Sudoku{
 
 	}
 	catch( Exception e ) {
-	    System.out.println("File not found");
+	    System.out.println();
 	}
  
     }
@@ -200,7 +201,7 @@ public class Sudoku{
 	else {
 	    removeValue(r,c);
 	    if ( c > 0 ) {
-		 removeValue(r - 1, c);
+		 removeValue(r, c-1);
 	    }
 	    else if ( c == 0 ){
 		 removeValue(r-1, 8);
@@ -212,6 +213,11 @@ public class Sudoku{
 
     public boolean testlegit(int max, ArrayList<Integer> poss, int r, int c){
 	s[r][c].setValue(max);
+	if (c == 0 && r == 0)
+	    return false;
+       	if ( c == 8 && r == 8) { 
+	    return true;
+	}
 	if (poss.size() >= 1){
 	    if ( c < 8 ) {
 		if (solveH(r,c+1) == false){
@@ -226,7 +232,7 @@ public class Sudoku{
 		}
 	    }
 	}
-	return false;
+	return true;
 	
     }
 
