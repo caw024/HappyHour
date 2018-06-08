@@ -189,8 +189,14 @@ public class Sudoku{
 	    else if ( solveH(c + 1) ) {
 		return true;
 	    }
-	    else { 
+	    else{
 		removeValue(r,c);
+
+		if (r == 0 && c >= 1){
+		    r = 8;
+		    c -= 1;
+		}
+		
 	    }
 	}
 	return false;
@@ -200,11 +206,10 @@ public class Sudoku{
 	// adds a value not in this square, row or column
 	if (s[r][c].originalSquare())
 	    return false;
-	while ((!checkRow(r) || !checkCol(c) || !checkSquare(r, c)) && s[r][c].getValue() < 9)
+	while ((!checkRow(r) || !checkCol(c) || !checkSquare(r, c)) && s[r][c].getValue() < 9){
 	    s[r][c].setValue(s[r][c].getValue() + 1);
-	if (checkRow(r) && checkCol(c) && checkSquare(r, c))
-	    return true;
-	return false;
+	}
+	return true;
     }
     
     private boolean removeValue(int r, int c){
