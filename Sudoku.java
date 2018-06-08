@@ -173,4 +173,21 @@ public class Sudoku{
 	s[r][c].setValue(0);
 	return true;
     }
+
+    public String toString(){
+	//send ANSI code "ESC[0;0H" to place cursor in upper left
+	String retStr = "[0;0H";  
+	//emacs shortcut: C-q, then press ESC
+	//emacs shortcut: M-x quoted-insert, then press ESC
+
+	for (int r = 0; r < 9; r++){
+	    for (int c = 0; c < 9; c++){
+		retStr += Integer.toString(s[r][c]);
+		retStr += "   ";
+	    }
+	    retStr += "\n";
+	}
+
+	return retStr
+    }
 }
