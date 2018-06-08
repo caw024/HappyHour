@@ -1,13 +1,15 @@
 public class Cell{
     private int value;
     private boolean original;
-    public Cell() {
-	value = 0;
-	original = false;
-    }
+    
     public Cell(int newVal){
 	value = newVal;
-	original = true;
+	if (value != 0) {
+	    original = true;
+	}
+	else {
+	    original = false;
+	}
     }
     public int getValue(){
 	return value;
