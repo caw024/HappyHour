@@ -24,4 +24,8 @@ public class Cell{
 	// checks if cell was a given value
 	return original;
     }
+
+    public String toString(){
+	return Integer.toString( value );
+    }
 }

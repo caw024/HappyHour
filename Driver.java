@@ -39,7 +39,7 @@ public class Driver{
 		int k;
 		while (true){
 		    yay.solve();
-		    System.out.println(yay);
+		    yay.printArr();
 		    System.out.println("What do you want to do next?\n1. Play again\n2. I'm done");
 		    try{
 			k = Keyboard.readInt();
@@ -69,7 +69,7 @@ public class Driver{
 
 		while (true){
 		    yay2.solve();
-		    System.out.println(yay2);
+		    yay2.printArr();
 		    System.out.println("What do you want to do next?\n1. Play again\n2. I'm done");
 		    try{
 			m = Keyboard.readInt();
